@@ -27,9 +27,10 @@
     </script>
 </head>
 <body>
-    <h3 id = "coreGPA">Core GPA will show here</h3>
+    <h3 id = "coreGPA" style="color: darkred";">Core GPA will show here</h3>
     <form>
         <!--insert html tags --> 
+        <!--creates drop down list for the IS 201 grade input and converts the selected option into a GPA value-->
         <label name = 'IS201Label'> IS 201 Grade:
             <select name="IS201" id="is201Grade">
                 <option value="4.0">A</option>
@@ -47,6 +48,7 @@
             </select>
         </label>
         <br>
+        <!--creates drop down list for the IS 303 grade input and converts the selected option into a GPA value-->
         <label name = 'IS303Label'> IS 303 Grade:
             <select name="IS303" id="is303Grade">
                <option value="4.0">A</option>
@@ -64,6 +66,7 @@
             </select>
         </label>
         <br>
+        <!--creates drop down list for the ACC 200 grade input and converts the selected option into a GPA value-->
         <label name = 'ACC200Label'> ACC 200 Grade:
             <select name="ACC200" id="acc200Grade">
                 <option value="4.0">A</option>
@@ -81,12 +84,15 @@
             </select>
         </label>
         <br>
+        <!--creates an input type of number for the user to input their overall GPA-->
         <label>What is your overall GPA? (0.0 - 4.0)</label>
         <input type="number" id="overallGPA" name="OverallGPA" value="1" min='0' max='4' step='0.1'>
         <br>
+        <!--creates an input type of number for the user to input their last 30 credits GPA-->
         <label>What is your last 30 Credits GPA? (0.0 - 4.0)</label>
         <input type="number" id="last30GPA" name="Last30GPA" value="1" min='0' max='4' step='0.1'>
         <br>
+        <!--creates a drop down list for the user to input their essay score-->
         <label name = 'EssayLabel'> Essay Score:
             <select name="Essay" id="essay">
                 <option value="0">0</option>
@@ -97,6 +103,7 @@
             </select>
         </label>
         <br>
+        <!--Button to do the calculation for the core GPA, which returns the value and is shown as a header-->
         <button type="button" onclick="calcGPA()">Calculate GPA</button>
         
 
